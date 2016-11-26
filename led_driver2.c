@@ -19,7 +19,10 @@ static char *msg_Ptr;
 static int device_open(struct inode *inode, struct file *file);
 static int device_release(struct inode *inode, struct file *file);
 static ssize_t device_read(struct file *, char *, size_t, loff_t *);
+
 static ssize_t device_write(struct file *, const char *, size_t, loff_t *);
+
+EXPORT_SYMBOL(device_write);
 
 
 static struct file_operations fops= {
